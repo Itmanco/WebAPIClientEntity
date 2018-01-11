@@ -1,0 +1,12 @@
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.deps.json
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.runtimeconfig.json
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.runtimeconfig.dev.json
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.dll
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.pdb
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.csprojResolveAssemblyReference.cache
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.csproj.CoreCompileInputs.cache
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.AssemblyInfoInputs.cache
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.AssemblyInfo.cs
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.dll
+D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.pdb

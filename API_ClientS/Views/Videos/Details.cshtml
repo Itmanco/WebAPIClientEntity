@@ -1,0 +1,90 @@
+﻿@model API_ClientS.Models.Videos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Videos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>        
+    </dl>
+
+    <table class="table">
+        @{
+            int total = 0;
+            foreach (var item in Model.Rates)
+            {
+                total += item.Rate;
+            }
+            total = Model.Rates.Count() > 0 ? total / Model.Rates.Count() : 0;
+        }
+        <tr>
+            <td>Rates: @(Model.Rates.Count()) entries - Average: @(total)</td>
+        </tr>
+        <tr>
+            <dd>
+                <a asp-controller="Rates" asp-action="Create" asp-route-id="@Model.IdVideo">Add Rate</a>
+            </dd>
+                
+        </tr>
+    </table>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Comments)
+    </dt>
+    <dd>
+        <p>
+            <a asp-controller="Comments" asp-action="Create" asp-route-id="@Model.IdVideo">New Comment</a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>User</th>
+                <th>Message</th>
+                <th>Date</th>
+            </tr>
+            @foreach (var item in Model.Comments)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdUser)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Text)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+                    <td>
+                        <a asp-controller="Comments" asp-action="Delete" asp-route-id="@item.IdComment">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </dd>
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdVideo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
