@@ -7,6 +7,7 @@ using API_ClientS.Data;
 using API_ClientS.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Http;
 
 namespace API_ClientS.Controllers
 {
@@ -70,6 +71,7 @@ namespace API_ClientS.Controllers
             {
                 client.BaseAddress = new Uri(Constants.BaseAPIAddress);
                 client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("Token"));
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 HttpResponseMessage response = await client.PostAsJsonAsync("api/putcomment?id=" + comment.IdVideo.ToString(), comment);
