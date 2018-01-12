@@ -36,6 +36,8 @@ namespace API_ClientS
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddSession();
+
             services.AddMvc();
         }
 
@@ -56,6 +58,8 @@ namespace API_ClientS
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

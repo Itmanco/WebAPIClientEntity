@@ -10,3 +10,15 @@ D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\A
 D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.AssemblyInfo.cs
 D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.dll
 D:\Centennial College\Centennial\Fall 2017\API Engineering and Cloud Computing\Assignments & Test\Final Project\API_ClientS\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.pdb
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.deps.json
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.runtimeconfig.json
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.runtimeconfig.dev.json
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.dll
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\bin\Debug\netcoreapp2.0\API_ClientS.pdb
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.csprojResolveAssemblyReference.cache
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.csproj.CoreCompileInputs.cache
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.AssemblyInfoInputs.cache
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.AssemblyInfo.cs
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.dll
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\API_ClientS.pdb
+C:\Users\rejr8\Source\Repos\WebAPIClientEntity\API_ClientS\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

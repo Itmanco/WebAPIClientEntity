@@ -13,6 +13,10 @@ using Microsoft.Extensions.Options;
 using API_ClientS.Models;
 using API_ClientS.Models.AccountViewModels;
 using API_ClientS.Services;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Http;
+using System.Text;
 
 namespace API_ClientS.Controllers
 {
@@ -59,22 +63,37 @@ namespace API_ClientS.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
+                string responseBody;
+                LoginEntity login = new LoginEntity
+                {
+                    Email = model.Email,
+                    Password = model.Password
+                };
+
+                //Start
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(Constants.BaseAPIAddress);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    
+                    HttpResponseMessage response = await client.PostAsJsonAsync("api/Auth", login);
+
+                    response.EnsureSuccessStatusCode();
+                    responseBody = await response.Content.ReadAsStringAsync();
+                    //return RedirectToAction("Details", "Account", new { id = comment.IdVideo.ToString() });
+                }
+
+                Execute<Token> responseObj = Newtonsoft.Json.JsonConvert.DeserializeObject<Execute<Token>>(responseBody);
+                Token token = responseObj.Entity;
+
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
-                if (result.Succeeded)
+                if (!responseObj.HasErro)
                 {
+                    HttpContext.Session.SetString("Token", token.TokenValue);
                     _logger.LogInformation("User logged in.");
                     return RedirectToLocal(returnUrl);
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToAction(nameof(LoginWith2fa), new { returnUrl, model.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToAction(nameof(Lockout));
                 }
                 else
                 {
