@@ -13148,11 +13148,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Centennial College\\Centennial\\Fall 2017\\API Engineering and Cloud Computing\\Assignments & Test\\Final Project\\API_ClientS\\API_ClientS\\API_ClientS.csproj",
+      "projectUniqueName": "D:\\Centennial College\\Centennial\\Fall 2017\\API Engineering and Cloud Computing\\Assignments & Test\\Final Project\\API_ClientS\\WebAPIClientEntity\\API_ClientS\\API_ClientS.csproj",
       "projectName": "API_ClientS",
-      "projectPath": "D:\\Centennial College\\Centennial\\Fall 2017\\API Engineering and Cloud Computing\\Assignments & Test\\Final Project\\API_ClientS\\API_ClientS\\API_ClientS.csproj",
+      "projectPath": "D:\\Centennial College\\Centennial\\Fall 2017\\API Engineering and Cloud Computing\\Assignments & Test\\Final Project\\API_ClientS\\WebAPIClientEntity\\API_ClientS\\API_ClientS.csproj",
       "packagesPath": "C:\\Users\\Jaime\\.nuget\\packages\\",
-      "outputPath": "D:\\Centennial College\\Centennial\\Fall 2017\\API Engineering and Cloud Computing\\Assignments & Test\\Final Project\\API_ClientS\\API_ClientS\\obj\\",
+      "outputPath": "D:\\Centennial College\\Centennial\\Fall 2017\\API Engineering and Cloud Computing\\Assignments & Test\\Final Project\\API_ClientS\\WebAPIClientEntity\\API_ClientS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
