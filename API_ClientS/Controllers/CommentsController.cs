@@ -145,6 +145,7 @@ namespace API_ClientS.Controllers
             {
                 client.BaseAddress = new Uri(Constants.BaseAPIAddress);
                 client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("Token"));
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 HttpResponseMessage response = await client.DeleteAsync("api/deletecommentbyid?id=" + id.ToString());
