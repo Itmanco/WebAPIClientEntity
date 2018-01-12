@@ -6,7 +6,7 @@ using API_ClientS.Data;
 using API_ClientS.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
-
+using Microsoft.AspNetCore.Http;
 
 namespace API_ClientS.Controllers
 {
@@ -22,7 +22,7 @@ namespace API_ClientS.Controllers
         // GET: Videos
         public async Task<IActionResult> Index()
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -51,7 +51,7 @@ namespace API_ClientS.Controllers
         // GET: Videos/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -86,7 +86,7 @@ namespace API_ClientS.Controllers
         // GET: Videos/Create
         public IActionResult Create()
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -105,7 +105,7 @@ namespace API_ClientS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdVideo,IdUser,Title,Description,DateTime")] Videos videos)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -129,7 +129,7 @@ namespace API_ClientS.Controllers
         // GET: Videos/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -170,7 +170,7 @@ namespace API_ClientS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("IdVideo,IdUser,Title,Description,DateTime")] Videos videos)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -199,7 +199,7 @@ namespace API_ClientS.Controllers
         // GET: Videos/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
@@ -236,7 +236,7 @@ namespace API_ClientS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return View("/Views/Account/AccessDenied.cshtml");
             }
